@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+{{model.id}}
+{{model.comment}}
+
+{% if flg == 1 %}
+<a href="{% url 'result' %}" class="btn btn-primary">結果発表</a>
+{% else %}
+<a href="{% url 'question' %}" class="btn btn-primary">次の問題へ</a>
+{% endif %}
+
+現在、{{number}}問正解！
+
+
+</div>
+
+
+    
+
+    
+  {% endblock content %}
+</html>

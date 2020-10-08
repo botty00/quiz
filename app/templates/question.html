@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+{{model.id}}
+{{model.question}}
+
+
+<a href="{% url 'answer' 1 %}"><button type="button" class="btn btn-outline-primary">〇</button></a>
+<a href="{% url 'answer' 0 %}" class="btn btn-outline-primary">✕</a>
+
+現在、{{number}}問正解！
+
+</div>
+
+    
+
+    
+  {% endblock content %}
+</html>
