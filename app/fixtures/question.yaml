@@ -1,0 +1,20 @@
+- model: app.Question_model
+  pk: 1
+  fields: 
+    question: "水溜りボンドのチャンネル登録者数は400万人以上である"
+    answer: true
+    comment: "正解は〇！現在のチャンネル登録者数は約436万人である"
+
+- model: app.Question_model 
+  pk: 2
+  fields: 
+    question: "トミーさんの本名は富永友義である"
+    answer: false
+    comment: "正解は✕！本名は富永知義である"
+
+- model: app.Question_model
+  pk: 3
+  fields: 
+    question: "カンタさんの本名は佐藤寛太である"
+    answer: false
+    comment: "正解は✕！本名は佐藤マイケル寛太である"  

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -90,10 +91,10 @@ WSGI_APPLICATION = 'quiz.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'question',
-        'USER': 'user1',
-        'PASSWORD': '0305post',
-        'HOST': 'localhost',
+        'NAME': 'da86vl1lroleb5',
+        'USER': 'qnyqjvqcjzzyrl',
+        'PASSWORD': 'da12df9a2178525e1d46206b5bd6008a971d358e6e146c4f897abc29ee560e4f',
+        'HOST': 'ec2-34-237-247-76.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }

@@ -37,8 +37,8 @@ def question(request):
         request.session['count']+=1
     else:
         request.session['count']=1
+        
     record=Question_model.objects.get(pk=request.session['count'])
-    
     if not 'number' in request.session:
         request.session['number']=0
     number=request.session['number']
