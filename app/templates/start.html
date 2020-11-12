@@ -5,13 +5,36 @@
 {% endblock header %}
 
 {% block content %}
-<div class="container">
-<h1 class="h3 mb-3 font-weight-normal">水溜りボンドクイズ</h1>
-<a href="{% url 'question' %}" class="btn btn-primary">スタート</a>
+<table border="0" height="100%" width="100%">
+  <tr>
+    <td style="height:100%;" vertical-align="middle" align="center">
+    
+      <div class="container">
+       
+        <div class="container-fluid">
+         <font size="20em" face="游明朝 Demibold">ボン人検定</font>
+         <br><br><br><br>
+         <div class="row">
+          <div class="col-md">
+          <a href="{% url 'question1' %}" class="btn btn-dark btn-lg btn-block">初級</a>
+          <br>
+          </div>
+          <div class="col-md">
+          <a href="{% url 'question2' %}" class="btn btn-dark btn-lg btn-block">中級</a>
+          <br>
+          </div>
+          <div class="col-md">
+          <a href="{% url 'question3' %}" class="btn btn-dark btn-lg btn-block">上級</a>
+          </div>
+         </div>
+       </div>
+      </div>
+    </td>
+  </tr>
 
 
-</div> 
+
+</table>
 
     
   {% endblock content %}
-</html>

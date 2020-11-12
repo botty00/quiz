@@ -32,7 +32,33 @@ def loginview(request):
             return render(request,'login.html',{'error':'ユーザー名もしくはパスワードが間違っています'})
     return render(request,'login.html')   
 
-def question(request):
+def question1(request):
+    if 'count' in request.session:
+        request.session['count']+=1
+    else:
+        request.session['count']=1
+        
+    record=Question_model.objects.get(pk=request.session['count'])
+    if not 'number' in request.session:
+        request.session['number']=0
+    number=request.session['number']
+
+    return render(request,'question.html',{'model':record,'number':number})
+
+def question2(request):
+    if 'count' in request.session:
+        request.session['count']+=1
+    else:
+        request.session['count']=1
+        
+    record=Question_model.objects.get(pk=request.session['count'])
+    if not 'number' in request.session:
+        request.session['number']=0
+    number=request.session['number']
+
+    return render(request,'question.html',{'model':record,'number':number})   
+
+def question3(request):
     if 'count' in request.session:
         request.session['count']+=1
     else:
@@ -77,6 +103,7 @@ def result(request):
     return render(request,'result.html',{'result':result})
 
 def start(request):
+    request.session['count']=1
     return render(request,'start.html')
 
 def top(request):
