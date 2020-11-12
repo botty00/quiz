@@ -74,7 +74,7 @@ def question3(request):
 def answer(request,correct):
     record=Question_model.objects.get(pk=request.session['count'])
 
-    if int(record.answer) == correct:
+    if record.answer == correct:
         print(record.answer)
         print(correct)
         request.session['number']+=1
